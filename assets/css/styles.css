@@ -1,0 +1,148 @@
+
+html{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.edit{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    margin-top: 1rem;
+    margin-right: 2rem;
+}
+
+.menu{
+    margin-top: 1rem;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1.25rem;
+    height: 55px;
+    width: auto;
+    position: relative;
+    z-index: 2;
+}
+
+input#Menu-cuadrado{
+    visibility: hidden;
+}
+
+input#luna{
+    visibility: hidden;
+}
+
+input#bolsa{
+    visibility: hidden;
+}
+
+input#Menu-cuadrado ~ ul{
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    height: calc( 100vh - 55px );
+    top: 55px;
+    right: 100%;
+    transition: all 300ms linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+input#Menu-cuadrado:checked ~ ul{
+    right: 0;
+}   
+
+.menu > ul > li > a{
+    color: black;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    transition: border-color .3s;
+}
+
+.menu > ul > li > a:hover{
+    color: darksalmon;
+}
+
+.rosado{
+    position: absolute;
+    background-color: lightcoral;
+    width: 250px;
+    height: 450px;
+    right: 0;
+    z-index: 1;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.imgh{
+    display: flex;
+    width: 250px;
+    height: 250px;
+    margin-top: 6rem;
+    z-index: 2;
+}
+
+.buzo{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.cont{
+    position: absolute;
+    display: flex;
+}
+
+h1{
+    color: black;
+    font-size: 40px;
+    padding-top: 25rem;
+    margin-left: .5rem;
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.parrf{
+    position: relative;
+    z-index: 2;
+    padding-top: 10rem;
+    margin-left: .5rem;
+}
+
+.precio{
+    position: relative;
+    padding-top: 1.5rem;
+    margin-left: .5rem;
+    color: darksalmon;
+    font-size: 26px;
+}
+
+@media only screen and (min-width: 600px){
+    .cuad{
+        visibility: hidden;
+     }
+
+    input#Menu-cuadrado ~ ul{
+        position: static;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        justify-content: flex-end;  
+    }
+    
+}
